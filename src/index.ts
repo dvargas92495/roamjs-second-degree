@@ -1,4 +1,4 @@
-import { toConfig } from "roam-client";
+import { addStyle, toConfig } from "roam-client";
 import { createConfigObserver } from "roamjs-components";
 import React from "react";
 
@@ -7,6 +7,7 @@ const CONFIG = toConfig(`example`);
 createConfigObserver({
   title: CONFIG,
   config: {
+    brand: '#00B96C',
     versioning: true,
     tabs: [
       {
@@ -14,6 +15,21 @@ createConfigObserver({
         fields: [
           {
             title: "sup",
+            type: "text",
+            description: "yo",
+          },
+        ],
+      },
+      {
+        id: "import",
+        fields: [
+          {
+            title: "normal setting",
+            type: "text",
+            description: "yo",
+          },
+          {
+            title: "what now",
             type: "text",
             description: "yo",
           },
